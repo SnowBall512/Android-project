@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/billAmountLabel"
+        android:text="Bill Amount"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:paddingTop="10dp" />
+
+    <!-- tip percent -->
+
+    <EditText
+        android:id="@+id/billAmountEdt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/billAmountLabel"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="0dp"
+        android:layout_toEndOf="@+id/billAmountLabel"
+        android:layout_toRightOf="@+id/billAmountLabel"
+        android:ems="8"
+        android:hint="Bill AMount"
+        android:textColor="@color/black"
+        android:inputType="numberDecimal"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/percentLabel"
+        android:text="Percent"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_alignBottom="@+id/percentbtnDown"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/percentTv"
+        android:text="Tip"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:layout_alignTop="@+id/percentLabel"
+        android:layout_alignLeft="@+id/billAmountEdt"
+        android:layout_alignStart="@+id/billAmountEdt"
+        />
+
+    <Button
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:id="@+id/percentbtnDown"
+        android:layout_below="@+id/billAmountEdt"
+        android:layout_toStartOf="@+id/percentbtnUp"
+        android:layout_toLeftOf="@+id/percentbtnUp"
+        android:text="-"
+        android:textSize="20sp" />
+
+    <Button
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:id="@+id/percentbtnUp"
+        android:layout_alignTop="@+id/percentbtnDown"
+        android:layout_alignEnd="@+id/billAmountEdt"
+        android:layout_alignRight="@+id/billAmountEdt"
+        android:text="+"
+        android:textSize="20sp" />
+    <!--  tip  -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tipLabel"
+        android:text="Tip"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_marginTop="23dp"
+        android:layout_below="@+id/percentbtnDown"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tipTv"
+        android:text="$0.00"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:layout_alignTop="@+id/tipLabel"
+        android:layout_alignLeft="@+id/percentTv"
+        android:layout_alignStart="@+id/percentTv"
+         />
+
+    <!-- The total amount -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/totalLabel"
+        android:text="Total"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_below="@+id/tipLabel"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="24dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/totalTv"
+        android:text="$0.00"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:layout_alignTop="@+id/totalLabel"
+        android:layout_alignLeft="@+id/tipTv"
+        android:layout_alignStart="@+id/tipTv" />
+
+
+</RelativeLayout>

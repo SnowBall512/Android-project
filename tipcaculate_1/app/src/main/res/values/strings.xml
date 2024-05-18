@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Tip Caculator</string>
+    <string name="bill_amount_label">Bill Amount</string>
+    <string name="percent_tip_label">Percent</string>
+    <string name="percent">percent</string>
+    <string name="down">-</string>
+    <string name="increase">-</string>
+    <string name="rise">+</string>
+    <string name="tip">tip</string>
+    <string name="tip_acount">Tip</string>
+    <string name="Tip">Tip</string>
+    <string name="total">Total</string>
+    <string name="total_amount">total</string>
+</resources>
