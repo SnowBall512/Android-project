@@ -97,7 +97,16 @@ public class MainActivity extends AppCompatActivity {
         btnDel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String maLop= edtMa.getText().toString()''
+                String maLop= edtMa.getText().toString();
+                int n = mydb.delete("tblop", "malop = ?", new String[] {maLop});
+                String msg="";
+                if(n==0){
+                    msg="Không có gì để xóa";
+                }
+                else {
+                    msg= n+ "Xóa thành công";
+                }
+                Toast.makeText(MainActivity.this, msg, Toast.LENGTH_SHORT).show();
             }
         });
 
