@@ -69,10 +69,10 @@ public class MainActivity extends AppCompatActivity {
                 myVl.put("siso",siso);
                 String msg="";
                 if(mydb.insert("tblop", null, myVl)==1){
-                    msg="Fail ";
+                    msg="Thêm không thành công ";
                 }
                 else {
-                    msg="Success";
+                    msg="Thêm thành công";
                 }
                 Toast.makeText(MainActivity.this, msg, Toast.LENGTH_SHORT).show();
             }
@@ -110,6 +110,23 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
+        btnUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int siso = Integer.parseInt(edtSo.getText().toString());
+                String malop = edtMa.getText().toString();
+                ContentValues myVl = new ContentValues();
+                myVl.put("siso", siso);
+                int n= mydb.update("tblop", myVl, "malop =?", new String[]{malop});
+                String msg="";
+                if(n==0){
+                    msg="Cập nhật không thành công";
+                }
+                else {
+                    msg=n+"Cập nhật thành công";
+                }
+                Toast.makeText(MainActivity.this, msg, Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }

@@ -94,10 +94,10 @@
 
         <Button
             android:id="@+id/btnInsert"
-            android:layout_width="wrap_content"
+            android:layout_width="131dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_weight="1.4"
+
+            android:layout_weight="1.5"
             android:text="THÊM"
             android:textSize="20sp" />
 
@@ -106,7 +106,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:layout_weight="1.4"
+            android:layout_weight="1.5"
             android:text="XÓA"
             android:textSize="20sp" />
 
@@ -123,8 +123,8 @@
             android:id="@+id/btnUpdate"
             android:layout_width="130dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_weight="1.2"
+
+            android:layout_weight="1.5"
             android:text="SỬA"
             android:textSize="20sp" />
 
@@ -133,7 +133,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:layout_weight="1.6"
+            android:layout_weight="1.5"
             android:text="IN"
             android:textSize="20sp" />
 
