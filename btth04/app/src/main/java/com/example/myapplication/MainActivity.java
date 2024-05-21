@@ -4,6 +4,8 @@ import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -57,18 +59,33 @@ public class MainActivity extends AppCompatActivity {
             Log.e("Error", "Table đã tồn tại");
         }
 
-        edtMa.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+//        edtMa.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+//            @Override
+//            public void onFocusChange(View v, boolean hasFocus) {
+//                if (!hasFocus) {
+//                    String maLop = edtMa.getText().toString();
+//                    if (!maLop.isEmpty()) {
+//                        displayClassInfo(maLop);
+//                        refreshList();
+//                    }
+//                }
+//            }
+//        });
+// Đăng ký TextWatcher cho EditText mã lớp
+        edtMa.addTextChangedListener(new TextWatcher() {
             @Override
-            public void onFocusChange(View v, boolean hasFocus) {
-                if (!hasFocus) {
-                    String maLop = edtMa.getText().toString();
-                    if (!maLop.isEmpty()) {
-                        displayClassInfo(maLop);
-                    }
-                }
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {}
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                String maLop = s.toString();
+                displayClassInfo(maLop);
+                refreshList();
             }
         });
-
         btnIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -129,9 +146,11 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 int siso = Integer.parseInt(sisoStr);
+                String tenLop = edtTen.getText().toString();
                 String malop = edtMa.getText().toString();
                 ContentValues myVl = new ContentValues();
                 myVl.put("siso", siso);
+                myVl.put("tenlop", tenLop);
                 int n = mydb.update("tblop", myVl, "malop = ?", new String[]{malop});
                 String msg = "";
                 if (n == 0) {
@@ -149,17 +168,23 @@ public class MainActivity extends AppCompatActivity {
 
     private void refreshList() {
         myList.clear();
-        Cursor c = mydb.query("tblop", null, null, null, null, null, null);
-        c.moveToNext();
-        String data = "";
+        String malop = edtMa.getText().toString().trim();
+        Cursor c;
+        if (!malop.isEmpty()) {
+            c = mydb.rawQuery("SELECT * FROM tblop WHERE malop LIKE ?", new String[]{"%" + malop + "%"});
+        } else {
+            c = mydb.query("tblop", null, null, null, null, null, null);
+        }
+        c.moveToFirst();
         while (!c.isAfterLast()) {
-            data = c.getString(0) + " - " + c.getString(1) + " - " + c.getString(2);
-            c.moveToNext();
+            String data = c.getString(0) + " - " + c.getString(1) + " - " + c.getString(2);
             myList.add(data);
+            c.moveToNext();
         }
         c.close();
         myAdapter.notifyDataSetChanged();
     }
+
 
     private void displayClassInfo(String malop) {
         Cursor cursor = mydb.rawQuery("SELECT * FROM tblop WHERE malop=?", new String[]{malop});

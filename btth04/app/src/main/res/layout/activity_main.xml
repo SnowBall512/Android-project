@@ -94,7 +94,7 @@
 
         <Button
             android:id="@+id/btnInsert"
-            android:layout_width="131dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
             android:layout_weight="1.5"
@@ -112,32 +112,12 @@
 
     </LinearLayout>
 
-    <LinearLayout
-
+    <Button
+        android:id="@+id/btnUpdate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:weightSum="3">
-
-        <Button
-            android:id="@+id/btnUpdate"
-            android:layout_width="130dp"
-            android:layout_height="wrap_content"
-
-            android:layout_weight="1.5"
-            android:text="SỬA"
-            android:textSize="20sp" />
-
-        <Button
-            android:id="@+id/btnQuery"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_weight="1.5"
-            android:text="IN"
-            android:textSize="20sp" />
-
-    </LinearLayout>
+        android:text="SỬA"
+        android:textSize="20sp" />
     <ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
