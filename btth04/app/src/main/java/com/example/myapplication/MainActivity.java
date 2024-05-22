@@ -113,6 +113,10 @@ public class MainActivity extends AppCompatActivity {
                         Toast.makeText(MainActivity.this, "Thêm không thành công", Toast.LENGTH_SHORT).show();
                     } else {
                         Toast.makeText(MainActivity.this, "Thêm thành công", Toast.LENGTH_SHORT).show();
+                        edtMa.getText().clear();
+                        edtMa.requestFocus();
+                        edtTen.getText().clear();
+                        edtSo.getText().clear();
                         refreshList(); // Refresh the list view
                     }
                 }
@@ -129,6 +133,10 @@ public class MainActivity extends AppCompatActivity {
                     msg = "Không có gì để xóa";
                 } else {
                     msg = n + " Xóa thành công";
+                    edtMa.getText().clear();
+                    edtMa.requestFocus();
+                    edtTen.getText().clear();
+                    edtSo.getText().clear();
                     refreshList(); // Refresh the list view
                 }
                 Toast.makeText(MainActivity.this, msg, Toast.LENGTH_SHORT).show();
@@ -139,6 +147,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String sisoStr = edtSo.getText().toString();
+                String tenLop = edtTen.getText().toString();
+                String malop = edtMa.getText().toString();
+
+                if (sisoStr.isEmpty() || tenLop.isEmpty() || malop.isEmpty()) {
+                    Toast.makeText(MainActivity.this, "Không có gì để sửa", Toast.LENGTH_SHORT).show();
+                    return;
+                }
 
                 if (!isNumeric(sisoStr)) {
                     Toast.makeText(MainActivity.this, "Sĩ số phải là một số", Toast.LENGTH_SHORT).show();
@@ -146,8 +161,6 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 int siso = Integer.parseInt(sisoStr);
-                String tenLop = edtTen.getText().toString();
-                String malop = edtMa.getText().toString();
                 ContentValues myVl = new ContentValues();
                 myVl.put("siso", siso);
                 myVl.put("tenlop", tenLop);
@@ -157,6 +170,10 @@ public class MainActivity extends AppCompatActivity {
                     msg = "Cập nhật không thành công";
                 } else {
                     msg = n + " Cập nhật thành công";
+                    edtMa.getText().clear();
+                    edtMa.requestFocus();
+                    edtTen.getText().clear();
+                    edtSo.getText().clear();
                     refreshList(); // Refresh the list view
                 }
                 Toast.makeText(MainActivity.this, msg, Toast.LENGTH_SHORT).show();
