@@ -17,7 +17,7 @@ import java.text.DecimalFormat;
 
 public class child_activity1 extends AppCompatActivity {
     TextView txt;
-    Button btn2, btnAtv;
+    Button btn2;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +31,7 @@ public class child_activity1 extends AppCompatActivity {
         });
         txt = findViewById(R.id.tvKQ);
         btn2 = findViewById(R.id.btnBack);
-        btnAtv=findViewById(R.id.atv2);
+
         Intent intent2 = getIntent();
         Bundle bundle2 = intent2.getBundleExtra("mybackage");
         int a = bundle2.getInt("soa");
@@ -56,12 +56,6 @@ public class child_activity1 extends AppCompatActivity {
                 startActivity(intent1);
             }
         });
-        btnAtv.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent1= new Intent(child_activity1.this, MainActivity2.class);
-                startActivity(intent1);
-            }
-        });
+
     }
 }
