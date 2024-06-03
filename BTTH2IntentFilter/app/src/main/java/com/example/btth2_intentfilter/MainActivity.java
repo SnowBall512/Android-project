@@ -33,7 +33,8 @@ public class MainActivity extends AppCompatActivity {
         btnshow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent iweb = new Intent(Intent.ACTION_VIEW, Uri.parse("https://"+edt.getText().toString()))
+                Intent iweb = new Intent(Intent.ACTION_VIEW, Uri.parse("https://"+edt.getText().toString()));
+                startActivity(iweb);
             }
         });
     }
