@@ -31,13 +31,12 @@
             android:textSize="20sp"
             tools:ignore="SpeakableTextPresentCheck" />
 
-        <Button
-            android:id="@+id/btnsend"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Gửi"
-            android:textSize="20sp" />
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/btn"
+            android:backgroundTint="#2ED33E"
+            android:src="@drawable/ic_phone" />
     </LinearLayout>
 
     <Button
