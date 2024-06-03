@@ -25,5 +25,12 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:text="SEND MESSAGE" />
+    <Button
+        android:layout_marginTop="10dp"
+        android:id="@+id/btnCamera"
+        android:background="@drawable/btn"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="OPEN CAMERA" />
 
 </LinearLayout>

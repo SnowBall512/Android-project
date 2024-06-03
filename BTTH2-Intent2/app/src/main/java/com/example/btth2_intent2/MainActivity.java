@@ -13,7 +13,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btnphone, btnmess;
+    Button btnphone, btnmess, btncam;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        btncam = findViewById(R.id.btnCamera);
         btnphone =findViewById(R.id.btnphone);
         btnmess=findViewById(R.id.btnmess);
         btnphone.setOnClickListener(new View.OnClickListener() {
@@ -37,6 +38,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent im = new Intent(MainActivity.this, ActivityMessage.class);
+                startActivity(im);
+            }
+        });
+        btncam.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent im = new Intent(MainActivity.this, CameraActivity.class);
                 startActivity(im);
             }
         });
