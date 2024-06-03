@@ -8,7 +8,7 @@ import android.os.IBinder;
 import androidx.annotation.Nullable;
 
 public class Myservice extends Service {
-    MediaPlayer mymedia;
+    MediaPlayer photograph;
 
     @Override
     public IBinder onBind(Intent intent) {
@@ -18,20 +18,25 @@ public class Myservice extends Service {
     @Override
     public void onCreate() {
         super.onCreate();
-        mymedia=MediaPlayer.create(Myservice.this, R.raw.photograph);
-        mymedia.setLooping(true);
+        photograph=MediaPlayer.create(Myservice.this, R.raw.photograph);
+        photograph.setLooping(true);
     }
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        if(mymedia.isPlaying()) mymedia.pause();
-        else mymedia.start();
+        if(photograph == null) {
+            photograph = MediaPlayer.create(Myservice.this, R.raw.photograph);
+            photograph.setLooping(true);
+        }
+        if(photograph.isPlaying()) photograph.pause();
+        else photograph.start();
         return super.onStartCommand(intent, flags, startId);
     }
+
 
     @Override
     public void onDestroy() {
         super.onDestroy();
-        mymedia.stop();
+        photograph.stop();
     }
 }
