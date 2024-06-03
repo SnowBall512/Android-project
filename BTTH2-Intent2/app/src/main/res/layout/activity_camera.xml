@@ -9,7 +9,7 @@
     android:orientation="vertical">
 
     <ImageView
-        android:id="@+id/cam"
+        android:id="@+id/imgcam"
         android:layout_width="match_parent"
         android:layout_height="609dp"
         android:src="@drawable/girl_img" />
