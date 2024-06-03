@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Trạng thái khi nút được nhấn -->
+    <item android:state_pressed="true" android:color="#FF0000"/> <!-- Màu đỏ -->
+
+    <!-- Trạng thái khi nút được chọn -->
+    <item android:state_selected="true" android:color="#00FF00"/> <!-- Màu xanh lá -->
+
+    <!-- Trạng thái khi nút được kích hoạt -->
+    <item android:state_enabled="false" android:color="#808080"/> <!-- Màu xám -->
+
+    <!-- Trạng thái mặc định -->
+    <item android:color="#0000FF"/> <!-- Màu xanh dương -->
+</selector>

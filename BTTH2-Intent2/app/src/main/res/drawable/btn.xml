@@ -1,0 +1,5 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#E1E1E1"/> <!-- Màu nền của hình chữ nhật -->
+    <size android:width="200dp" android:height="100dp"/> <!-- Chiều rộng và chiều cao của hình chữ nhật -->
+    <corners android:radius="1.5dp"/> <!-- Góc bo của hình chữ nhật, đặt bằng 0 để có góc vuông -->
+</shape>

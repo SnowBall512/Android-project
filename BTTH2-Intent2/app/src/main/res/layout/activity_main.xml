@@ -6,19 +6,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:padding="30dp">
 
     <Button
-        android:layout_marginTop="20dp"
         android:id="@+id/btnphone"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/btn"
         android:text="CALL PHONE" />
 
+
     <Button
+        android:layout_marginTop="10dp"
         android:id="@+id/btnmess"
+        android:background="@drawable/btn"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:text="SEND MESSAGE" />
 
 </LinearLayout>
