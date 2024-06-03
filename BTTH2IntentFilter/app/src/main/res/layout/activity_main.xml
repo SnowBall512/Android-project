@@ -11,7 +11,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout-gravity="center"
+        android:layout_gravity="center"
         android:text="Nhập link website "
         android:textColor="#94B64F"
         android:textSize="25sp"
