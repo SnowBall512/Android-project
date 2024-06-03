@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="@color/black">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:elevation="4dp"
+        app:title="Intent_service"
+        app:titleTextColor="@color/white"
+        android:background="#2E2E2E"/>
+
+    <ImageView
+        android:id="@+id/img_music"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:background="@drawable/music_img" />
+    <LinearLayout
+        android:layout_marginTop="50dp"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        >
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@drawable/ic_play"
+            android:backgroundTint="#2E2E2E"
+            android:backgroundTintMode="screen"/>
+        <ImageButton
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@drawable/ic_pause"
+            android:backgroundTint="#2E2E2E"
+            android:backgroundTintMode="screen"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>
