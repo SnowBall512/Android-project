@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "406721143985",
+    "project_id": "quanlysinhvien-7707a",
+    "storage_bucket": "quanlysinhvien-7707a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:406721143985:android:3bf2c2b50568e4afdaae90",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDSg4Zco02yYUa053tb4NRtUMXh0wDNLyY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

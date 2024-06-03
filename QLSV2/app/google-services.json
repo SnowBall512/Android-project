@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "505134468790",
+    "project_id": "qlsv-82224",
+    "storage_bucket": "qlsv-82224.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:505134468790:android:66ef4ff836d5e386206017",
+        "android_client_info": {
+          "package_name": "com.example.qlsv"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAomZ1BxrgzgWmS4uQtiD0hPDjwdHRpSxk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
