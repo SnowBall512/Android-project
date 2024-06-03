@@ -25,7 +25,7 @@
         android:orientation="horizontal">
 
         <EditText
-            android:id="@+id/edtmess"
+            android:id="@+id/edtphone"
             android:layout_width="274dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -35,11 +35,12 @@
             tools:ignore="SpeakableTextPresentCheck" />
 
         <ImageButton
+            android:id="@+id/btnphone"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:background="@drawable/btn"
             android:backgroundTint="#2ED33E"
-            android:src="@drawable/ic_sms" />
+            android:src="@drawable/ic_phone" />
     </LinearLayout>
     <Button
         android:id="@+id/btnbackphone"

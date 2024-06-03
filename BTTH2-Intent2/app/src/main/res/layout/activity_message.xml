@@ -34,11 +34,12 @@
             tools:ignore="SpeakableTextPresentCheck" />
 
         <ImageButton
+            android:id="@+id/btnmess"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:background="@drawable/btn"
             android:backgroundTint="#2ED33E"
-            android:src="@drawable/ic_phone" />
+            android:src="@drawable/ic_sms" />
     </LinearLayout>
 
     <Button

@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,7 +19,8 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class ActivityPhone extends AppCompatActivity {
     EditText edtphone;
-    Button btnphone, btnback;
+    ImageButton btnphone;
+    Button btnback;
     private static final int REQUEST_CALL_PHONE = 1;
 
     @Override
@@ -32,7 +34,7 @@ public class ActivityPhone extends AppCompatActivity {
             return insets;
         });
 
-        edtphone = findViewById(R.id.edtmess); // Ensure this ID matches your XML
+        edtphone = findViewById(R.id.edtphone); // Ensure this ID matches your XML
         btnphone = findViewById(R.id.btnphone);
         btnback = findViewById(R.id.btnbackphone);
 
@@ -40,6 +42,7 @@ public class ActivityPhone extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent im = new Intent(ActivityPhone.this, MainActivity.class);
+                finish();
                 startActivity(im);
             }
         });
